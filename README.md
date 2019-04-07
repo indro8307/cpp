@@ -6,7 +6,7 @@ All code snippets are written in eclipse IDE on windows and compiled with minGW 
 If you are using Fedora, Red Hat, CentOS, Debian or Ubuntu Linux, you can use GNU C/C++ compiler 
 for compiling the snippets as shown below:
 
-g++ <file_name.cpp> -o <executable>
+g++ <file_name.cpp>
 
 
 

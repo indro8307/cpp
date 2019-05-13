@@ -12,7 +12,7 @@ using namespace std;
 
 struct Adder
 {
-	int operator()(int &sum, int &element){
+	int operator()(int &sum, int &element){     // This is a Functor
 		return sum+element;
 	}
 };

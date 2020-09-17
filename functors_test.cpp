@@ -4,7 +4,7 @@
  *  Description: Demonstrating the usage of functors.
  *      
  */
-
+#if 0
 #include <iostream>
 #include <vector>
 
@@ -35,4 +35,4 @@ int main()
 	return 0;
 }
 
-
+#endif

@@ -9,7 +9,7 @@ where a user can perform the following actions:
     erase:  delete a name from the list
 
 *******************************************************************************/
-
+#if 0
 #include <iostream>
 #include <list>
 
@@ -163,3 +163,4 @@ int main()
 
     return 0;
 }
+#endif

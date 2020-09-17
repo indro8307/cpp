@@ -7,7 +7,7 @@ scheme in vectors using size, capacity, reserve, clear
 methods.
 
 *******************************************************************************/
-
+#if 0
 #include <iostream>
 #include <vector>
 
@@ -43,3 +43,4 @@ int main()
 
     return 0;
 }
+#endif

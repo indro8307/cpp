@@ -6,6 +6,7 @@
  *
  */
 
+#if 0
 #include <iostream>
 #include <map>
 
@@ -33,4 +34,4 @@ int main()
     return 0;
 }
 
-
+#endif

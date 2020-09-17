@@ -5,7 +5,7 @@ test_vector
 Description: understanding vector and push_back function
 
 *******************************************************************************/
-
+#if 0
 #include <iostream>
 #include <vector>
 
@@ -49,3 +49,4 @@ int main()
     
     return 0;
 }
+#endif

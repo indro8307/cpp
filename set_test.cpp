@@ -5,7 +5,7 @@
  *
  */
 
-
+#if 0
 #include <iostream>
 #include <set>
 
@@ -28,3 +28,4 @@ int main()
 	return 0;
 }
 
+#endif

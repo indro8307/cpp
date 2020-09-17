@@ -13,12 +13,15 @@ std::array have the following properties:
 Following std::array methods are demonstrated
     at() - accesses an element with bound check.
     data() - returns actual pointer to the array elements i.e. &arr[0]
+    fill() - fills all elements of array with a certain value
+    usage of iterators and for_each with arrays
 
 *******************************************************************************/
 
 #if 1
 #include <iostream>
 #include <array>
+#include <algorithm>
 
 
 class Employee
@@ -81,6 +84,12 @@ int main()
 	//// or u can simply use the C style but this DOES NOT do boundary check !!!!
 	emparr[2](7,"Jenny");
 	std::cout<<"printing in C style "<<emparr[2]<<std::endl;
+
+	//// fill all elements using some value and use foreach to print
+	emparr.fill(Employee(0,""));
+	std::for_each(emparr.begin(),emparr.end(),[](Employee& e){
+		std::cout<<e<<std::endl;
+	});
 	return 0;
 }
 

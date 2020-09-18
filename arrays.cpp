@@ -18,7 +18,7 @@ Following std::array methods are demonstrated
 
 *******************************************************************************/
 
-#if 1
+#if 0
 #include <iostream>
 #include <array>
 #include <algorithm>

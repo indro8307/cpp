@@ -8,7 +8,7 @@ Description: Demonstrate usage of std::sort algorithm in C++
 
 *******************************************************************************/
 
-#if 1
+#if 0
 #include<iostream>
 #include<vector>
 #include<array>

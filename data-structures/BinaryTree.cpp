@@ -5,77 +5,32 @@
 
  */
 
-#if 0
-#include <iostream>
-
-template<typename T>
-class BTree
-{
-	class node
-	{
-		T val;
-		node* left;
-		node* right;
-	};
-
-	node* root;
-	void _inorder(node*);
-	void _preorder(node*);
-	void _postorder(node*);
-public:
-	BTree(): root{nullptr} {}
-	void print_inorder();
-	void print_preorder();
-	void print_postorder();
-};
-
-template <typename T>
-void BTree<T>::_inorder(node *aroot)
-{
-	if(aroot != nullptr){
-		_inorder(aroot->left);
-		std::cout<<aroot->val<<" ";
-		_inorder(aroot->right);
-	}
-}
-template <typename T>
-void BTree<T>::_preorder(node *aroot)
-{
-	if(aroot != nullptr){
-		std::cout<<aroot->val<<" ";
-		_preorder(aroot->left);
-		_preorder(aroot->right);
-	}
-}
-template <typename T>
-void BTree<T>::_postorder(node *aroot)
-{
-	if(aroot != nullptr){
-		_postorder(aroot->left);
-		_postorder(aroot->right);
-		std::cout<<aroot->val<<" ";
-	}
-}
-
-template <typename T>
-void BTree<T>::print_inorder()
-{
-	_inorder(root);
-}
-template <typename T>
-void BTree<T>::print_preorder()
-{
-	_preorder(root);
-}
-template <typename T>
-void BTree<T>::print_postorder()
-{
-	_postorder(root);
-}
+#if 1
+#include "BinaryTree.h"
+#include <array>
 
 int main()
 {
 	BTree<int> btree;
+	std::array<int,8> io{40,20,50,10,30,80,70,90};
+	std::array<int,8> preo{10,20,40,50,30,70,80,90};
+	try{
+	btree.construct_btree(io, preo);
+	}
+	catch(...)
+	{
+		std::cout<<"caught exception";
+	}
+	btree.print_preorder();
+	std::cout<<std::endl;
+	btree.print_inorder();
+	std::cout<<std::endl;
+	btree.print_postorder();
+	std::cout<<std::endl;
+	std::cout<<"height of binary tree = "<<btree.get_height()<<std::endl;
+	std::cout<<"Values at level 3 = ";
+	btree.printValuesAtLevel(3);
+	std::cout<<std::endl;
 	return 0;
 }
 

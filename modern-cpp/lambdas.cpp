@@ -4,7 +4,7 @@ lambdas.cpp
 Description: Demonstrate usage of lambda expressions in C++ 11/14
 
 *******************************************************************************/
-#if 1
+#if 0
 #include <iostream>
 #include <algorithm>
 #include <array>

@@ -101,6 +101,15 @@ int main()
 	func8(10);
 	std::cout<<dummy<<std::endl;  // dummy prints 26
 
+	// from c++14 onwards, the following is possible
+	int x=10;
+	// introducing a new variable y and initializing it with an expression y=x+10
+	// here y is captured by value. To capture it using reference use:
+	//  &y=x+10
+	auto func9 = [y=x+10](int a){
+		return y+a;
+	};
+	std::cout<<func9(10)<<std::endl;
 	return 0;
 }
 

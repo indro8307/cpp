@@ -139,6 +139,8 @@ template<typename T>
 bool BTree<T>::construct_btree(inorder io,preorder preo)
 {
 	//std::cout<<typeid(inorder).name();
+	if(root != nullptr)
+		return false;   // TODO: freeing of existing BTree nodes
 	int pindex = 0;
 	try{
 	_construct_btree(io.data(),preo.data(),pindex,0,io.size()-1,nullptr,centre);
